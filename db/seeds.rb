@@ -1,0 +1,41 @@
+[Booking, User, Activity].each{|m| m.destroy_all }
+
+Activity.create(name: "Zumba", img_url: "https://www.verywellfit.com/thmb/WtaRzGOCbJdVYFlWr_7VOfwn_Ow=/3000x2002/filters:no_upscale():max_bytes(150000):strip_icc()/zumba-fatcamera-c9d4ee824a0f4fda883484f878abc8ae.jpg", description: "Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness.", start_time: "6am", duration: 90)
+Activity.create(name: "Powerlifting", img_url: "https://www.verywellfit.com/thmb/WtaRzGOCbJdVYFlWr_7VOfwn_Ow=/3000x2002/filters:no_upscale():max_bytes(150000):strip_icc()/zumba-fatcamera-c9d4ee824a0f4fda883484f878abc8ae.jpg", description: "Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness.", start_time: "12pm", duration: 60)
+Activity.create(name: "Crossfit", img_url: "https://www.verywellfit.com/thmb/WtaRzGOCbJdVYFlWr_7VOfwn_Ow=/3000x2002/filters:no_upscale():max_bytes(150000):strip_icc()/zumba-fatcamera-c9d4ee824a0f4fda883484f878abc8ae.jpg", description: "Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness.", start_time: "10am", duration: 30)
+Activity.create(name: "Yoga", img_url: "https://www.verywellfit.com/thmb/WtaRzGOCbJdVYFlWr_7VOfwn_Ow=/3000x2002/filters:no_upscale():max_bytes(150000):strip_icc()/zumba-fatcamera-c9d4ee824a0f4fda883484f878abc8ae.jpg", description: "Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness.", start_time: "5pm", duration: 60)
+Activity.create(name: "Pilates", img_url: "https://www.verywellfit.com/thmb/WtaRzGOCbJdVYFlWr_7VOfwn_Ow=/3000x2002/filters:no_upscale():max_bytes(150000):strip_icc()/zumba-fatcamera-c9d4ee824a0f4fda883484f878abc8ae.jpg", description: "Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness.", start_time: "1pm", duration: 90)
+Activity.create(name: "Flexibility and Core", img_url: "https://www.verywellfit.com/thmb/WtaRzGOCbJdVYFlWr_7VOfwn_Ow=/3000x2002/filters:no_upscale():max_bytes(150000):strip_icc()/zumba-fatcamera-c9d4ee824a0f4fda883484f878abc8ae.jpg", description: "Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness.", start_time: "2pm", duration: 30)
+
+
+User.create(name: "Bugs Bunny", age: 74, fitness_level: "2-3 times per week", preferences: "casual, group, music, cardio")
+User.create(name: "Daffy Duck", age: 50, fitness_level: "7 times per week", preferences: "casual, lifting")
+User.create(name: "Porky Pig", age: 34, fitness_level: "0 times per week", preferences: "music")
+User.create(name: "Elmer Fud", age: 98, fitness_level: "2-3 times per week", preferences: "casual, music, cardio")
+
+
+Booking.create(user_id: 1, activity_id: 1, day_of_week: "Monday")
+Booking.create(user_id: 2, activity_id: 1, day_of_week: "Monday")
+Booking.create(user_id: 4, activity_id: 5, day_of_week: "Monday")
+Booking.create(user_id: 2, activity_id: 2, day_of_week: "Monday")
+Booking.create(user_id: 3, activity_id: 2, day_of_week: "Monday")
+Booking.create(user_id: 4, activity_id: 4, day_of_week: "Monday")
+Booking.create(user_id: 1, activity_id: 1, day_of_week: "Monday")
+Booking.create(user_id: 4, activity_id: 3, day_of_week: "Tuesday")
+Booking.create(user_id: 3, activity_id: 4, day_of_week: "Tuesday")
+Booking.create(user_id: 2, activity_id: 2, day_of_week: "Tuesday")
+Booking.create(user_id: 2, activity_id: 1, day_of_week: "Tuesday")
+Booking.create(user_id: 1, activity_id: 2, day_of_week: "Tuesday")
+Booking.create(user_id: 2, activity_id: 3, day_of_week: "Tuesday")
+Booking.create(user_id: 3, activity_id: 5, day_of_week: "Tuesday")
+Booking.create(user_id: 4, activity_id: 2, day_of_week: "Tuesday")
+Booking.create(user_id: 1, activity_id: 2, day_of_week: "Wednesday")
+Booking.create(user_id: 3, activity_id: 6, day_of_week: "Wednesday")
+Booking.create(user_id: 3, activity_id: 2, day_of_week: "Wednesday")
+Booking.create(user_id: 1, activity_id: 1, day_of_week: "Thursday")
+Booking.create(user_id: 1, activity_id: 5, day_of_week: "Thursday")
+Booking.create(user_id: 4, activity_id: 6, day_of_week: "Thursday")
+Booking.create(user_id: 2, activity_id: 3, day_of_week: "Friday")
+Booking.create(user_id: 4, activity_id: 4, day_of_week: "Friday")
+Booking.create(user_id: 2, activity_id: 2, day_of_week: "Friday")
+
