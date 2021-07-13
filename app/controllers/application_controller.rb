@@ -14,8 +14,14 @@ class ApplicationController < Sinatra::Base
     200
   end
 
-  # method "URL" do
-    
-  # end
+  get "/users" do
+    users = User.all
+    users.to_json
+  end
+
+  get "/activities" do
+    activities = Activity.all
+    activities.to_json
+  end
 
 end
