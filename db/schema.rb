@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 2021_07_13_185452) do
     t.text "description"
     t.string "start_time"
     t.integer "duration"
+    t.boolean "music"
+    t.boolean "cardio"
+    t.boolean "strength"
+    t.integer "max_size"
   end
 
   create_table "bookings", force: :cascade do |t|

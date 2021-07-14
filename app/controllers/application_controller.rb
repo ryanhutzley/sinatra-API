@@ -39,4 +39,19 @@ class ApplicationController < Sinatra::Base
     new_user = User.create(params)
     new_user.to_json
   end
+
+  get "/users/:id/recs" do
+    user = User.find(params[:id])
+    prefsArray = user.preferences.split(", ")
+    storageArray = []
+    prefsArray.each do |pref|
+      Activity.all.select do |activity|
+        if activity.cardio && pref.include?("cardio")
+          storageArray << activity
+        end
+      end 
+    end
+    storageArray.to_json
+  end
+
 end

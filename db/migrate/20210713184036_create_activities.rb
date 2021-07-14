@@ -6,6 +6,10 @@ class CreateActivities < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :start_time
       t.integer :duration
+      t.boolean :music
+      t.boolean :cardio
+      t.boolean :strength
+      t.integer :max_size
     end
   end
 end
