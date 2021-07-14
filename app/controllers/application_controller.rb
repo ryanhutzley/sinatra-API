@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 
   get "/bookings/:id" do
     userBookings = Booking.where("user_id = ?", params[:id])
-    userBookings.to_json(include: :activity)
+    userBookings.to_json(include: :activity, methods: :activity_users)
     
   end
 
@@ -41,17 +41,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/users/:id/recs" do
-    user = User.find(params[:id])
+    user = User.find(params[:id]) 
     prefsArray = user.preferences.split(", ")
-    storageArray = []
+    storageHash = {}
     prefsArray.each do |pref|
-      Activity.all.select do |activity|
-        if activity.cardio && pref.include?("cardio")
-          storageArray << activity
-        end
-      end 
+      storageHash[pref] = true
     end
-    storageArray.to_json
+    Activity.where(storageHash).to_json
   end
 
 end
