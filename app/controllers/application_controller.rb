@@ -24,4 +24,19 @@ class ApplicationController < Sinatra::Base
     activities.to_json
   end
 
+  get "/bookings" do
+    bookings = Booking.all
+    bookings.to_json(include: [:user, :activity])
+  end
+
+  get "/bookings/:id" do
+    userBookings = Booking.where("user_id = ?", params[:id])
+    userBookings.to_json(include: :activity)
+    
+  end
+
+  post "/new_user" do
+    new_user = User.create(params)
+    new_user.to_json
+  end
 end

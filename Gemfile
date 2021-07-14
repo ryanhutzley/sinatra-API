@@ -15,6 +15,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
+gem 'activerecord-reset-pk-sequence'
 
 group :test do
   gem 'rspec'
