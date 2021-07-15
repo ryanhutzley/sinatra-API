@@ -50,4 +50,8 @@ class ApplicationController < Sinatra::Base
     Activity.where(storageHash).to_json
   end
 
+  post "/new_booking" do 
+    new_booking = Booking.create(params)
+    new_booking.to_json
+  end
 end
