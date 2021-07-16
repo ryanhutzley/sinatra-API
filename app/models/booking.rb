@@ -1,5 +1,5 @@
 class Booking < ActiveRecord::Base
-
+    validates :day_of_week, presence: true
     validates_uniqueness_of :user_id, :scope => [:activity_id, :day_of_week]
 
     belongs_to :user
