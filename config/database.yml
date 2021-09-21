@@ -8,7 +8,7 @@ test:
 
 production:
   adapter: postgresql
-  database: dfrneesl2i7opi
-  username: absdxzqoyihdfn
-  password: 9ea381314b0489246c55c87de5dd860d382899c67f6959ef2587e5ef4d652313
-  host: ec2-3-89-0-52.compute-1.amazonaws.com
+  database: sch_database #rename this to whatever you want
+  username: username
+  password: password
+  host: localhost
