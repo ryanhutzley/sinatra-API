@@ -1,4 +1,7 @@
-require 'sinatra'
+ENV['SINATRA_ENV'] ||= "development"
+
+require 'bundler/setup'
+Bundler.require(:default, ENV['SINATRA_ENV'])
 
 configure :development do
   ActiveRecord::Base.establish_connection(
@@ -20,5 +23,5 @@ configure :production do
   )
 end
 
-# require './app/controllers/application_controller'
-# require_all 'app'
+require './app/controllers/application_controller'
+require_all 'app'
