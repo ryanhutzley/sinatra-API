@@ -1,3 +1,5 @@
+require 'sinatra'
+
 configure :development do
   ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
@@ -18,5 +20,5 @@ configure :production do
   )
 end
 
-require './app/controllers/application_controller'
-require_all 'app'
+# require './app/controllers/application_controller'
+# require_all 'app'
