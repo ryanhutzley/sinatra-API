@@ -13,7 +13,7 @@ configure :development do
 end
 
 configure :production do
-  db = URI.parse(ENV['postgresql-infinite-87698'] || 'postgres://localhost/mydb')
+  db = URI.parse(ENV['SINATRA_ENV'] || 'postgres://localhost/mydb')
 
   ActiveRecord::Base.establish_connection(
     :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
